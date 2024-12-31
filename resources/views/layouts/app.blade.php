@@ -18,17 +18,14 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('products.index') }}">Home</a>
+                                <a class="nav-link {{ request()->is('products*') ? 'active' : '' }}" href="{{ route('products.index') }}">Products</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('categories.index') }}">Categories</a>
+                                <a class="nav-link {{ request()->is('categories*') ? 'active' : '' }}" href="{{ route('categories.index') }}">Categories</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('subcategories.index') }}">Sub Categories</a>
+                                <a class="nav-link {{ request()->is('subcategories*') ? 'active' : '' }}" href="{{ route('subcategories.index') }}">Sub Categories</a>
                             </li>
-                            <!-- <li class="nav-item">
-                                <a class="nav-link" href="{{ route('products.index') }}">Show products</a>
-                            </li> -->
                         </ul>
                     </div>
                 </nav>

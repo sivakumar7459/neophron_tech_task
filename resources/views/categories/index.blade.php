@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <h1>Categories</h1>
+    <h1>Product categories</h1>
     <a href="{{ route('categories.create') }}" class="btn btn-primary">Add new category</a>
     <br>
     <br>
@@ -17,7 +17,6 @@
         <tbody>
             @foreach($categories as $category)
             <tr>
-                <!-- <td>{{ $category->id }}</td> -->
                 <td>{{ $loop->iteration }}</td>
                 <td>{{ $category->name }}</td>
                 <td>

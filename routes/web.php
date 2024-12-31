@@ -21,12 +21,13 @@ Route::resource('subcategories', SubcategoryController::class);
 Route::resource('products', ProductController::class);
 
 Route::get('/', function () {
+    $products = \App\Models\Product::all();
+    return view('products.index', compact('products'));
+});
+Route::get('/', function () {
     return view('categories.index');
 });
 Route::get('/', function () {
     return view('subcategories.index');
-});
-Route::get('/', function () {
-    return view('products.index');
 });
 
